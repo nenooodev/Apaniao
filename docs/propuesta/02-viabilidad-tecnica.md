@@ -368,6 +368,29 @@ Se plantea una arquitectura dividida (*Decoupled Architecture*) con coste **$0/m
 
 > **Conclusión técnica:** El uso del stack **MERN** desplegado de forma independiente en plataformas SaaS especializadas (Vercel + Render) garantiza una arquitectura profesional, escalable y con coste cero durante la validación de la idea.
 
+# CAPACIDADES DEL EQUIPO
+
+## Inventario de Habilidades del Equipo
+
+A continuación se detalla el nivel técnico real de los integrantes del equipo al inicio del proyecto:
+
+| Integrante | React | Node / Express | MongoDB | Git / GitHub |
+| --- | --- | --- | --- | --- |
+| **África** | Básico | Sin Experiencia | Sin Experiencia | Intermedio |
+| **A. Manuel** | Sin Experiencia | Sin Experiencia | Sin Experiencia | Intermedio |
+| **Antonio** | Básico | Básico | Sin Experiencia | Intermedio |
+| **Aarón** | Sin Experiencia | Sin Experiencia | Básico | Intermedio |
+
+## Lagunas de Conocimiento Identificadas
+
+- **Curva de aprendizaje en el stack MERN:** Dado que varios miembros no cuentan con experiencia previa en Node.js, Express o MongoDB, y el nivel en React es principiante, se requerirá un periodo de aprendizaje inicial.
+- **Coordinación y flujos de Git:** Aunque todo el equipo cuenta con nivel intermedio en Git, se deben afianzar las dinámicas de *Pull Request* y revisión de código para no bloquear los avances.
+- **Integración y comunicación Client-Server:** Comprender cómo conectar las peticiones HTTP desde React con las rutas protegidas en Express y la persistencia en MongoDB Atlas es muy importante.
+
+## Valoración de Viabilidad
+
+A pesar de contar con un nivel inicial ajustado, el proyecto es **viable y alcanzable** si nos ceñimos a los requisitos *Must Have* definidos en el MVP. La distribución de tareas se basará en la colaboración para que aquellos con algo de base en frontend/backend puedan guiarse mutuamente, priorizando funcionalidades sencillas pero sólidas.
+
 # IDENTIFICACIÓN DE RIESGOS TÉCNICOS
 
 ## Riesgo 1: El uso inadecuado de las tecnologías
