@@ -1,4 +1,9 @@
 # Viabilidad técnica Apañao
+
+## Introducción
+El proyecto **Apañao** nace con la misión de aliviar la carga mental y económica de estudiantes y jóvenes recién independizados al gestionar su alimentación diaria, optimizar la despensa y planificar sus compras sin gastar de más. Para garantizar que esta solución sea técnicamente realista dentro del tiempo que disponemos y de los recursos disponibles, este documento presenta el análisis de viabilidad técnica de la aplicación. 
+
+A lo largo de este documento se evalúan los requisitos funcionales priorizados bajo la metodología MoSCoW, la definición del Producto Mínimo Viable (MVP), la arquitectura del stack MERN (MongoDB, Express, React y Node.js) y los posibles riesgos que podemos encontrarnos durante el desarrollo y sus las posibles soluciones a estas.
  
  ## FUNCIONALIDADES PRINCIPALES
 
@@ -363,6 +368,58 @@ Se plantea una arquitectura dividida (*Decoupled Architecture*) con coste **$0/m
 
 > **Conclusión técnica:** El uso del stack **MERN** desplegado de forma independiente en plataformas SaaS especializadas (Vercel + Render) garantiza una arquitectura profesional, escalable y con coste cero durante la validación de la idea.
 
+# CAPACIDADES DEL EQUIPO
 
+## Inventario de Habilidades del Equipo
 
+A continuación se detalla el nivel técnico real de los integrantes del equipo al inicio del proyecto:
+
+| Integrante | React | Node / Express | MongoDB | Git / GitHub |
+| --- | --- | --- | --- | --- |
+| **África** | Básico | Sin Experiencia | Sin Experiencia | Intermedio |
+| **A. Manuel** | Sin Experiencia | Sin Experiencia | Sin Experiencia | Intermedio |
+| **Antonio** | Básico | Básico | Sin Experiencia | Intermedio |
+| **Aarón** | Sin Experiencia | Sin Experiencia | Básico | Intermedio |
+
+## Lagunas de Conocimiento Identificadas
+
+- **Curva de aprendizaje en el stack MERN:** Dado que varios miembros no cuentan con experiencia previa en Node.js, Express o MongoDB, y el nivel en React es principiante, se requerirá un periodo de aprendizaje inicial.
+- **Coordinación y flujos de Git:** Aunque todo el equipo cuenta con nivel intermedio en Git, se deben afianzar las dinámicas de *Pull Request* y revisión de código para no bloquear los avances.
+- **Integración y comunicación Client-Server:** Comprender cómo conectar las peticiones HTTP desde React con las rutas protegidas en Express y la persistencia en MongoDB Atlas es muy importante.
+
+## Valoración de Viabilidad
+
+A pesar de contar con un nivel inicial ajustado, el proyecto es **viable y alcanzable** si nos ceñimos a los requisitos *Must Have* definidos en el MVP. La distribución de tareas se basará en la colaboración para que aquellos con algo de base en frontend/backend puedan guiarse mutuamente, priorizando funcionalidades sencillas pero sólidas.
+
+# IDENTIFICACIÓN DE RIESGOS TÉCNICOS
+
+## Riesgo 1: El uso inadecuado de las tecnologías
+
+**Riesgo:** Tenemos conocimiento limitado (como hemos dicho en la pregunta anterior), por lo que a lo mejor no le sacamos el mejor provecho, tanto por lo que vamos a tardar (ya que alguien con conocimientos más amplios tardaría menos que nosotros) como por calidad del código.
+
+**Mitigación:** Dedicaremos un tiempo a la investigación antes de implementar para entender las mejores prácticas.
+
+## Riesgo 2: Falta de experiencia
+
+**Riesgo:** Al no haber realizado muchos proyectos en grupo (y no conocer del todo las formas de trabajar de cada uno) existe la posibilidad de cometer algun error. Esto errores van desde falta de comunicación (como nos ha pasado, que alguien ha hecho la parte de otro por error) o tardar al aceptar los PR.
+
+**Mitigación:** Organizaremos el flujo mediante un tablero de tareas (GitHub Projects) con asignación única. También tenemos la regla de "rama por funcionalidad", prohibiendo cambios directos en main.
+
+## Riesgo 3: Falta de información
+
+**Riesgo:** Hay APIs de muchos supermercados, pero no de todos. Esto puede afectar a la hora de almacenar que productos se pueden usar a la hora de planificar las semanas.
+
+**Mitigación:** Para el MVP nos conectaremos a pocas APIs, las necesarias como para demostrar que el producto funciona como debe. Más adelante se irán añadiendo mas supermercados.
+
+## Riesgo 4: Recetas
+
+**Riesgo:** Actualmente tenemos pensado hacer las recetas y el planteamiento semanal mediante IA. No es la forma más óptima, ya que depender 100% de un LLM en cada consulta genera alta latencia, riesgo de recetas raras (combinaciones de comida poco apetecibles) y falta de control sobre los formatos de salida para la app.
+
+**Mitigación:** Adoptaremos un modelo híbrido: mantendremos un catálogo base de recetas en bases de datos para responder al instante. La IA solo se consultará para búsquedas complejas o combinaciones específicas utilizando modelos rápidos y optimizados.
+
+## Riesgo 5: Hosting gratuito
+
+**Riesgo:** Al desplegar el backend o la base de datos en plataformas gratuitas, las instancias se "duermen" tras unos minutos sin recibir peticiones. Cuando un usuario intenta usar la app, la primera respuesta puede tardar entre 30 y 60 segundos, dando la sensación de que la aplicación no funciona.
+
+**Mitigación:** Gestionaremos la experiencia de usuario. Diseñaremos en el frontend un indicador de carga claro acompañado de un mensaje simpático cuando el servidor tarde en responder (por ejemplo: *"Despertando la cocina de Apañao, esto puede tardar unos segundos..."*). De este modo se evita la sensación de que la aplicación se ha quedado pillada.
 
