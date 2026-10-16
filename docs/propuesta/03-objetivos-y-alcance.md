@@ -21,9 +21,9 @@ Desarrollar y validar una aplicación móvil (*Mobile-First*) basada en el stack
 | **OE-03** | **Rendimiento en Redes Móviles:** Garantizar una navegación fluida en conexiones de datos (4G/5G) optimizando el backend en Node.js/Express y la interfaz móvil en React. | Tiempo de respuesta de la API (latencia) y puntuación de rendimiento móvil en Google Lighthouse. | Latencia de API < 1,5s y puntuación Lighthouse móvil ≥ 85/100. | Auditorías con Google Lighthouse (perfil Mobile) y pruebas de red simulada 1 semana antes de la defensa. |
 | **OE-04** | **Adaptación a Principiantes (Cero Asunciones):** Integrar recetas con lenguaje coloquial, sin tecnicismos, adaptadas a utensilios básicos y con guía explícita para el uso de tápers/congelador. | Grado de comprensión de los pasos e indicaciones por usuarios sin experiencia previa en cocina. | 100% de comprensibilidad en las instrucciones y utensilios requeridos (0 dudas sobre términos técnicos). | Prueba de validación del paso a paso con 3 personas reales sin experiencia culinaria 1 semana antes de la defensa. |
 
-## 2. Alcance y límites del proyecto
+## 2. Alcance
 
-### 2.1. Producto Mínimo Viable (MVP) y Correcciones del Recorrido
+### 2.1. El MVP
 
 El MVP detallado y su análisis de viabilidad se encuentran definidos en el documento [02-viabilidad-tecnica.md](docs/propuesta/02-viabilidad-tecnica.md).
 
@@ -42,7 +42,7 @@ Hemos tenido en cuenta las correcciones de la A0.4, por lo que hemos **corregido
 
 **Justificación y Enfoque:** Para la primera versión **priorizaremos la experiencia de uso en dispositivos móviles**, ya que es el entorno natural donde el usuario interactuará con la app (en la cocina revisando la despensa o en el supermercado).
 
-### 2.3. Usuarios y Datos de Prueba
+### 2.3. Usuarios y datos
 
 - **Volumen de usuarios objetivo:** En la fase de pruebas usaremos un entorno controlado de un mínimo **usuarios simulados**.
 - **Naturaleza de los datos:**
@@ -50,7 +50,7 @@ Hemos tenido en cuenta las correcciones de la A0.4, por lo que hemos **corregido
     - **Recetas:** Catálogo inicial de datos reales (un mínimo de recetas básicas bien estructuradas con ingredientes y cantidades estándar en la base de datos).
     - **Despensa y Lista:** Generados dinámicamente durante las pruebas de uso.
 
-### 2.4. Fuera de Alcance
+### 2.4. Lo que no haremos
 
 Para asegurar la entrega dentro del calendario y ajustarnos a la capacidad del equipo, las siguientes características **no se realizarán** en esta versión:
 
@@ -64,7 +64,7 @@ Para asegurar la entrega dentro del calendario y ajustarnos a la capacidad del e
 5. **Aplicación móvil nativa (Android / iOS):**
     - *Por qué:* Tomaría más tiempo del que disponemos. Al priorizar el diseño *Mobile-First* en la web, cubrimos las necesidades del móvil sin duplicar la carga de trabajo.
 
-### 2.5. Ampliaciones Futuras Priorizadas
+### 2.5. Ampliaciones futuras
 
 En caso de disponer de más tiempo, las mejoras que serian interesantes abordar serían:
 
