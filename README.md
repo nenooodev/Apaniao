@@ -1,4 +1,4 @@
-# Equipo [Placeholder]
+# Equipo [Apañao]
 
 ## Integrantes
 - Antonio López Gautier
