@@ -25,7 +25,7 @@ Desarrollar y validar una aplicación móvil (*Mobile-First*) basada en el stack
 
 ### 2.1. El MVP
 
-El MVP detallado y su análisis de viabilidad se encuentran definidos en el documento [02-viabilidad-tecnica.md](docs/propuesta/02-viabilidad-tecnica.md).
+El MVP detallado y su análisis de viabilidad se encuentran definidos en el documento [02-viabilidad-tecnica.md](02-viabilidad-tecnica.md).
 
 Hemos tenido en cuenta las correcciones de la A0.4, por lo que hemos **corregido el recorrido del MVP** para garantizar que solo utilice funcionalidades clasificadas estrictamente como **Must Have**, eliminando dependencias externas y requisitos inconsistentes:
 
