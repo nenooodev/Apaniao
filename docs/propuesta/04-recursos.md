@@ -78,40 +78,115 @@ Se seguirá la siguiente estrategia de ramas, acorde a lo establecido en el cont
 
 ### Estructura de carpetas
 
-Dado que se utilizará el stack MERN, se propone la siguiente estructura de carpetas para el repositorio monorepo:
+Dado que se utilizará el stack MERN, la estructura de carpetas prevista para el repositorio monorepo se alinea con la definida en los README del cliente y del servidor:
 
 ```text
 apaniao/
-├── .github/              # Workflows, plantillas de PR e issues
-├── client/               # Aplicación frontend (React + Vite + Tailwind CSS)
-│   ├── src/
-│   │   ├── assets/       # Imágenes, fuentes, etc.
-│   │   ├── components/   # Componentes reutilizables
-│   │   ├── hooks/        # Custom hooks
-│   │   ├── layouts/      # Layouts de la aplicación
-│   │   ├── pages/        # Vistas principales (páginas)
-│   │   ├── services/     # Llamadas a la API (Axios, TanStack Query)
-│   │   ├── store/        # Estado global (Zustand/Context)
-│   │   ├── utils/        # Funciones auxiliares
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-├── server/               # Aplicación backend (Node.js + Express)
-│   ├── src/
-│   │   ├── config/       # Configuración (DB, variables de entorno)
-│   │   ├── controllers/  # Controladores de las rutas
-│   │   ├── middlewares/  # Middlewares (auth, validación, errores)
-│   │   ├── models/       # Modelos de Mongoose
-│   │   ├── routes/       # Definición de rutas de la API
-│   │   ├── services/     # Lógica de negocio
-│   │   ├── utils/        # Utilidades (jwt, bcrypt, etc)
-│   │   ├── validators/   # Esquemas de validación (Zod)
-│   │   └── app.js
-│   ├── package.json
-│   └── server.js
-├── docs/                 # Documentación del proyecto (propuesta, contrato, etc)
+├── .github/                  # Workflows, plantillas de PR e issues
+├── client/                   # Aplicación frontend (React + Vite + Tailwind CSS)
+│   ├── index.html            # Punto de entrada HTML de Vite
+│   ├── package.json          # Dependencias y scripts
+│   ├── vite.config.js        # Configuración de Vite
+│   ├── tailwind.config.js    # Configuración de Tailwind CSS
+│   ├── postcss.config.js     # Integración de PostCSS/Tailwind
+│   ├── .env                  # Variables de entorno (no versionado)
+│   └── src/
+│       ├── main.jsx          # Punto de entrada de React
+│       ├── App.jsx           # Componente raíz
+│       ├── api/              # Instancia Axios y peticiones a la API
+│       │   ├── axios.js
+│       │   ├── auth.js
+│       │   ├── pantry.js
+│       │   ├── menus.js
+│       │   └── shoppingList.js
+│       ├── store/            # Estado global (Zustand/Context)
+│       │   ├── authStore.js
+│       │   ├── pantryStore.js
+│       │   └── shoppingStore.js
+│       ├── hooks/            # Hooks reutilizables
+│       │   ├── useAuth.js
+│       │   └── useQueries.js
+│       ├── context/          # Contextos de React
+│       │   └── AuthContext.jsx
+│       ├── components/       # Componentes reutilizables
+│       │   ├── layout/
+│       │   ├── ui/
+│       │   ├── Loader.jsx
+│       │   └── ProtectedRoute.jsx
+│       ├── features/         # Módulos por funcionalidad
+│       │   ├── auth/
+│       │   ├── profile/
+│       │   ├── pantry/
+│       │   ├── menus/
+│       │   ├── recipes/
+│       │   ├── shopping/
+│       │   └── tuppers/
+│       ├── pages/            # Páginas asociadas a rutas
+│       │   ├── Home.jsx
+│       │   ├── Login.jsx
+│       │   ├── Register.jsx
+│       │   ├── Profile.jsx
+│       │   ├── Pantry.jsx
+│       │   ├── MenuPlanner.jsx
+│       │   ├── ShoppingList.jsx
+│       │   └── NotFound.jsx
+│       ├── routes/           # Definición centralizada de rutas
+│       │   └── AppRoutes.jsx
+│       ├── utils/            # Utilidades y helpers
+│       │   ├── validators.js
+│       │   └── constants.js
+│       └── styles/
+│           └── index.css
+├── server/                   # Aplicación backend (Node.js + Express)
+│   ├── package.json          # Dependencias y scripts
+│   ├── .env                  # Variables de entorno (no versionado)
+│   ├── .env.example          # Plantilla de variables de entorno
+│   └── src/
+│       ├── server.js         # Arranque del servidor
+│       ├── app.js            # Configuración de Express
+│       ├── config/           # Configuración
+│       │   ├── db.js
+│       │   └── env.js
+│       ├── models/           # Modelos de Mongoose
+│       │   ├── User.js
+│       │   ├── Ingredient.js
+│       │   ├── Recipe.js
+│       │   ├── Menu.js
+│       │   └── ShoppingList.js
+│       ├── routes/           # Rutas de la API (/api/v1)
+│       │   ├── index.js
+│       │   ├── auth.routes.js
+│       │   ├── user.routes.js
+│       │   ├── pantry.routes.js
+│       │   ├── menu.routes.js
+│       │   └── shopping.routes.js
+│       ├── controllers/      # Controladores
+│       │   ├── auth.controller.js
+│       │   ├── user.controller.js
+│       │   ├── pantry.controller.js
+│       │   ├── menu.controller.js
+│       │   └── shopping.controller.js
+│       ├── services/         # Lógica de negocio
+│       │   ├── auth.service.js
+│       │   ├── pantry.service.js
+│       │   ├── menu.service.js
+│       │   └── shopping.service.js
+│       ├── middlewares/      # Middlewares
+│       │   ├── auth.middleware.js
+│       │   ├── validate.middleware.js
+│       │   ├── error.middleware.js
+│       │   └── rateLimit.middleware.js
+│       ├── validators/       # Esquemas de validación
+│       │   ├── auth.schema.js
+│       │   ├── ingredient.schema.js
+│       │   ├── menu.schema.js
+│       │   └── shopping.schema.js
+│       ├── utils/            # Utilidades
+│       │   ├── jwt.js
+│       │   ├── password.js
+│       │   └── ApiError.js
+│       └── tests/            # Pruebas automatizadas
+├── docs/                     # Documentación del proyecto
 ├── .prettierrc
 ├── .prettierignore
 ├── .nvmrc

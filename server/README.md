@@ -97,6 +97,3 @@ npm install     # Instala dependencias
 npm run dev     # Entorno de desarrollo (nodemon)
 npm start       # Arranca el servidor en producción
 ```
-
-> El despliegue del backend se realizará en **Render** (plan gratuito),
-> con MongoDB en **MongoDB Atlas** (Free Tier).
