@@ -17,5 +17,11 @@ El proyecto **Apañao** está desarrollado utilizando el stack **MERN**:
 ## Cómo arrancar el proyecto
 *Por rellenar próximamente.* 
 
+## Documentación
+- [Propuesta - Problema](./docs/propuesta/01-problema.md)
+- [Propuesta - Viabilidad Técnica](./docs/propuesta/02-viabilidad-tecnica.md)
+- [Propuesta - Objetivos y Alcance](./docs/propuesta/03-objetivos-y-alcance.md)
+- [Propuesta - Recursos](./docs/propuesta/04-recursos.md)
+
 ## Tablero
 https://github.com/users/nenooodev/projects/4
