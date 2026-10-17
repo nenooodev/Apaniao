@@ -1,4 +1,4 @@
-# Contrato de equipo · [Placeholder]
+# Contrato de equipo · Apaniao
 
 ## Compromisos
 
