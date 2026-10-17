@@ -56,7 +56,7 @@ Para más detalles sobre la arquitectura, los endpoints y las colecciones, se pu
 | Gestión de estilos | [Tailwind CSS](https://tailwindcss.com/) e [Iconos Lucide](https://lucide.dev/) | Para el desarrollo del frontend de forma ágil y mobile-first. |
 | Pruebas de API (manual) | [Postman](https://www.postman.com/) | Colección compartida para los endpoints (`/api/v1/...`), con guardado del token JWT para las rutas privadas. |
 | Testing automatizado - Frontend | [Vitest](https://vitest.dev/) | Pruebas unitarias de componentes, hooks y utilidades. |
-| Testing automatizado - Backend | [Vitest](https://vitest.dev/) + [Supertest](https://github.com/ladjs/supertest) | Pruebas de integración de la API REST. |
+| Testing automatizado - Backend | [Jest](https://jestjs.io/) + [Supertest](https://github.com/ladjs/supertest) | Pruebas de integración de la API REST. |
 | Control de versiones | [Git](https://git-scm.com/) y [GitHub](https://github.com/) | Para la gestión del repositorio, Pull Requests y revisión de código. |
 | Gestión de tareas | [GitHub Projects](https://github.com/users/nenooodev/projects/4) | Tablero Kanban para la asignación y seguimiento de tareas. |
 
