@@ -238,32 +238,36 @@ La planificación de menús y la generación de listas se implementarán inicial
 
 ### 3. Base de Datos (MongoDB)
 
-Se utilizará **MongoDB Atlas** como servicio de base de datos en la nube y **Mongoose** como herramienta de modelado y acceso desde Node.js. La aplicación tendrá una base de datos independiente para sus datos y utilizará identificadores `ObjectId` para relacionar los documentos.
+Se utilizará MongoDB Atlas como servicio de base de datos en la nube y Mongoose como herramienta de modelado y acceso desde Node.js. La aplicación tendrá una base de datos independiente para sus datos y utilizará identificadores `ObjectId` para relacionar los documentos.
 
 #### Colecciones principales
 
-Para el MVP se proponen cuatro colecciones principales:
+Para el MVP se proponen cinco colecciones principales:
 
 | Colección | Contenido y finalidad |
-| ----- | ----- |
-| **users** | Cuentas de usuario, credenciales protegidas, perfil, alergias, intolerancias, alimentos preferidos y alimentos que el usuario desea evitar. |
-| **Ingredients** | Ingredientes de la despensa de cada usuario, con nombre, cantidad, unidad de medida, ubicación de almacenamiento y fecha de caducidad opcional. |
-| **menus** | Planes semanales de comidas asociados a cada usuario, con las fechas del periodo y las comidas planificadas, incluyendo los datos necesarios para identificar las recetas seleccionadas. |
-| **shopping_lists** | Listas de la compra asociadas a cada usuario, con sus productos, cantidades y estado pendiente o comprado. Permiten registrar los ingredientes que faltan para completar un menú. |
+| --- | --- |
+| users | Cuentas de usuario, credenciales protegidas, perfil, alergias, intolerancias, alimentos preferidos y alimentos que el usuario desea evitar. |
+| Ingredients | Ingredientes de la despensa de cada usuario, con nombre, cantidad, unidad de medida, ubicación de almacenamiento y fecha de caducidad opcional. |
+| recipes | Recetas disponibles en la aplicación, con nombre, descripción, ingredientes y sus cantidades, instrucciones de preparación, número de raciones, tiempo de preparación y alérgenos identificados. |
+| menus | Planes semanales de comidas asociados a cada usuario, con las fechas del periodo y las comidas planificadas, incluyendo los datos necesarios para identificar las recetas seleccionadas. |
+| shopping\_lists | Listas de la compra asociadas a cada usuario, con sus productos, cantidades y estado pendiente o comprado. Permiten registrar los ingredientes que faltan para completar un menú. |
 
-Las relaciones entre colecciones se establecerán mediante referencias a los identificadores de MongoDB. Cada documento de despensa, menú y lista de la compra incluirá una referencia al usuario propietario. De este modo, se podrá consultar y modificar la información de forma independiente para cada cuenta.
+Las relaciones entre colecciones se establecerán mediante referencias a los identificadores de MongoDB. Cada documento de despensa, menú y lista de la compra incluirá una referencia al usuario propietario. Los documentos de recetas podrán ser referenciados desde los menús mediante su `ObjectId`. De este modo, se podrá consultar y modificar la información de forma independiente para cada cuenta, reutilizando las recetas en diferentes planes semanales.
 
-Para mantener el MVP sencillo, los elementos de las comidas planificadas y los productos de cada lista de la compra podrán almacenarse como subdocumentos dentro de sus respectivas colecciones. No será necesario crear una colección independiente para cada receta o cada producto de la lista.
+Para mantener el MVP sencillo, los elementos de las comidas planificadas y los productos de cada lista de la compra podrán almacenarse como subdocumentos dentro de sus respectivas colecciones. En la colección `recipes`, los ingredientes y los alérgenos también podrán almacenarse como arrays de subdocumentos o valores dentro de cada receta. No será necesario crear una colección independiente para cada receta o cada producto de la lista.
 
 #### Esquema de la base de datos en Mermaid
 
-El siguiente diagrama representa las relaciones propuestas entre las cuatro colecciones. Los campos mostrados son orientativos y podrán concretarse al implementar los modelos de Mongoose.
+El siguiente diagrama representa las relaciones propuestas entre las cinco colecciones. Los campos mostrados son orientativos y podrán concretarse al implementar los modelos de Mongoose.
 
-```mermaid
+mermaid
+```
 erDiagram
     USERS ||--o{ INGREDIENTS : tiene
     USERS ||--o{ MENUS : planifica
     USERS ||--o{ SHOPPING_LISTS : gestiona
+    MENUS }o--o{ RECIPES : incluye
+    RECIPES }o--o{ INGREDIENTS : utiliza
 
     USERS {
         ObjectId _id PK
@@ -288,6 +292,19 @@ erDiagram
         date updatedAt
     }
 
+    RECIPES {
+        ObjectId _id PK
+        string name
+        string description
+        array ingredients
+        array instructions
+        array allergens
+        number servings
+        number preparationTime
+        date createdAt
+        date updatedAt
+    }
+
     MENUS {
         ObjectId _id PK
         ObjectId userId FK
@@ -303,7 +320,7 @@ erDiagram
         ObjectId userId FK
         string name
         array items
-         enum status
+        enum status
         date createdAt
         date updatedAt
     }
