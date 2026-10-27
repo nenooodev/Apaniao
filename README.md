@@ -19,5 +19,5 @@ MongoDB, Express, React, Node.js
 Próximamente
 ## Enlaces
 - Tablero: https://github.com/users/nenooodev/projects/4
-- Contrato de equipo: [docs/contrato.md](docs/contrato.md)
-- Propuesta: [docs/PROPUESTA.md](docs/PROPUESTA.md)
+- Análisis de la competencia: [docs/analisis-competencia.md](docs/analisis-competencia.md)
+- Estructura organizativa: [docs/estructura-organizativa.md](docs/estructura-organizativa.md)
