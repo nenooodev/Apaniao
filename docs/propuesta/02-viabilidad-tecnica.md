@@ -79,12 +79,14 @@ Las funcionalidades esenciales de **Apañao** permiten gestionar los alimentos d
 
 - **Registro de usuarios:** Crear una cuenta en la aplicación mediante correo electrónico y contraseña.
 - **Inicio de sesión:** Acceder al espacio personal mediante las credenciales del usuario.
+- - **Cierre de sesión:** Cerrar la sesión de forma segura para proteger la información personal.
 - **Configuración del perfil:** Consultar y modificar los datos personales y las preferencias de configuración.
 - **Gestión de preferencias alimentarias:** Configurar ingredientes favoritos, ingredientes que no gustan, tipos de comida preferidos y tiempo disponible para cocinar.
 - **Gestión de alérgenos e intolerancias:** Seleccionar los alérgenos e intolerancias del usuario para evitar recomendaciones de recetas que contengan esos ingredientes.
 - **Gestión del presupuesto:** Establecer un presupuesto semanal máximo para adaptar las recomendaciones y las necesidades de compra al dinero disponible.
 - **Alta de ingredientes:** Añadir alimentos a la despensa indicando su nombre y cantidad disponible.
 - **Consulta de despensa:** Visualizar los alimentos registrados y disponibles en la nevera y la despensa.
+- - **Actualización de alimentos:** Modificar las cantidades y los datos de los productos existentes en la despensa.
 - **Gestión de táperes:** Registrar, consultar y gestionar los táperes disponibles, indicando su contenido, número de raciones, fecha de preparación y ubicación (nevera o congelador).
 - **Actualización de táperes:** Modificar la información de los táperes registrados, incluyendo su contenido, número de raciones y ubicación.
 - **Descuento de raciones:** Descontar las raciones disponibles de un táper cuando se consume o se utiliza para una comida.
@@ -97,8 +99,6 @@ Las funcionalidades esenciales de **Apañao** permiten gestionar los alimentos d
 
 *Funcionalidades que aportan un valor considerable y completan la experiencia principal, pero que no son imprescindibles para una primera versión funcional.*
 
-- **Cierre de sesión:** Cerrar la sesión de forma segura para proteger la información personal.
-- **Actualización de alimentos:** Modificar las cantidades y los datos de los productos existentes en la despensa.
 - **Baja de productos:** Eliminar alimentos agotados, caducados o que ya no se encuentren disponibles.
 - **Organización de la compra:** Clasificar los productos de la lista de la compra por categorías o pasillos del supermercado (carne, huevos, lácteos, panadería, despensa, fruta y verdura).
 - **Traspaso a despensa:** Marcar los productos comprados para incorporarlos directamente al inventario de la despensa.
