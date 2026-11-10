@@ -69,71 +69,59 @@ A lo largo de este documento se evalúan los requisitos funcionales priorizados 
 20. **Gestión de favoritos:**  
       El usuario puede marcar una receta como favoritapara tenerla siempre accesible rápidamente.
 
+# MVP de Apañao
+
 ### MUST HAVE
 
-*Obligatorias, sin esto no funciona la app*  
+*Funcionalidades obligatorias para que la aplicación cumpla su propósito principal.*
 
-Las funcionalidades escenciales de **Apañao**, son las siguientes:  
+Las funcionalidades esenciales de **Apañao** permiten gestionar los alimentos disponibles, conocer qué se puede cocinar y controlar las necesidades de compra.
 
-- **Registro de usuarios:** Registrarse en la app introduciendo correo y contraseña  
-
-- **Inicio de sesión:** Iniciar sesión para acceder a tu espacio privado  
-
-- **Configuración de un perfil:** Editar los datos personales y las preferencias de configuración de cada usuario  
-
-- **Gestión de alérgenos:** Seleccionar alérgenos e intolerancias para poder filtrar recetas que no puedan comer por los alérgenos
-
-- **Alta de ingredientes:** Añadir un nuevo ingredienteal inventario de la despensa
-
-- **Consulta de despensa:** Consultar la lista completa de alimentos disponibles en la despensa
-
-- **Planificación de menús:** Crear menú semanal personalizado combinando recetas y tuppers.
-
-- **Sincronización con la compra:** Añadir automáticamente los ingredientes faltantes del menú a la lista
-
-- **Consulta lista de la compra:** Consultar y editar lista de la compra pendiente
-
-
+- **Registro de usuarios:** Crear una cuenta en la aplicación mediante correo electrónico y contraseña.
+- **Inicio de sesión:** Acceder al espacio personal mediante las credenciales del usuario.
+- **Configuración del perfil:** Consultar y modificar los datos personales y las preferencias de configuración.
+- **Gestión de preferencias alimentarias:** Configurar ingredientes favoritos, ingredientes que no gustan, tipos de comida preferidos y tiempo disponible para cocinar.
+- **Gestión de alérgenos e intolerancias:** Seleccionar los alérgenos e intolerancias del usuario para evitar recomendaciones de recetas que contengan esos ingredientes.
+- **Gestión del presupuesto:** Establecer un presupuesto semanal máximo para adaptar las recomendaciones y las necesidades de compra al dinero disponible.
+- **Alta de ingredientes:** Añadir alimentos a la despensa indicando su nombre y cantidad disponible.
+- **Consulta de despensa:** Visualizar los alimentos registrados y disponibles en la nevera y la despensa.
+- **Gestión de táperes:** Registrar, consultar y gestionar los táperes disponibles, indicando su contenido, número de raciones, fecha de preparación y ubicación (nevera o congelador).
+- **Actualización de táperes:** Modificar la información de los táperes registrados, incluyendo su contenido, número de raciones y ubicación.
+- **Descuento de raciones:** Descontar las raciones disponibles de un táper cuando se consume o se utiliza para una comida.
+- **Sugerencia de comidas:** Obtener propuestas de platos basadas en los ingredientes disponibles, los táperes existentes, las preferencias alimentarias, los alérgenos y el tiempo disponible.
+- **Notificaciones de descongelación de táperes:** Enviar avisos automáticos la noche anterior cuando las recomendaciones de Apañao incluyan para el día siguiente un táper almacenado en el congelador, recordando al usuario que debe pasarlo a la nevera para que esté listo a la hora de comer.
+- **Generación de la lista de la compra:** Crear una lista con los ingredientes que faltan para completar las recetas recomendadas.
+- **Consulta y edición de la lista de la compra:** Visualizar, añadir, modificar y eliminar productos pendientes de compra.
 
 ### SHOULD HAVE
 
-*Aportan bastante valor y completan la experiencia principal, pero la app podría seguir funcionando sin ellas*
+*Funcionalidades que aportan un valor considerable y completan la experiencia principal, pero que no son imprescindibles para una primera versión funcional.*
 
-* **Cierre de sesión:** Cerrar sesión de manera segura para proteger la información personal
-
-* **Actualización de Alimentos:** Actualizar la cantidad o datos de un alimento existente en la despensa.
-- **Baja de Productos:** Eliminar un producto agotado o caducado del inventario.
-
-- **Registro de Tuppers:** Registrar un nuevo tupper cocinado especificando raciones y fecha.
-
-- **Consulta de Tuppers:** Consultar el stock de tuppers guardados en nevera o congelador.
-
-- **Descuento de Tuppers:** Descontar una ración de un tupper al incluirlo en el menú semanal.
-
-- **Sugerencia de Recetas:** Generar propuestas de recetas basadas en los ingredientes y alérgenos.
-
-- **Traspaso a Despensa:** Marcar productos comprados para trasladarlos directamente a la despensa.
-
-
+- **Cierre de sesión:** Cerrar la sesión de forma segura para proteger la información personal.
+- **Actualización de alimentos:** Modificar las cantidades y los datos de los productos existentes en la despensa.
+- **Baja de productos:** Eliminar alimentos agotados, caducados o que ya no se encuentren disponibles.
+- **Organización de la compra:** Clasificar los productos de la lista de la compra por categorías o pasillos del supermercado (carne, huevos, lácteos, panadería, despensa, fruta y verdura).
+- **Traspaso a despensa:** Marcar los productos comprados para incorporarlos directamente al inventario de la despensa.
+- **Optimización de ingredientes:** Priorizar recetas que permitan aprovechar los mismos ingredientes durante varios días y reducir el desperdicio alimentario.
 
 ### COULD HAVE
 
-*Funcionalidades secundarias o mejoras que mejoran la comodidad del usuario si el calendario de desarrollo lo permite*
+*Funcionalidades complementarias que mejoran la comodidad y la experiencia de usuario, pero que pueden incorporarse si el calendario de desarrollo lo permite.*
 
-- **Gestión de Favoritos:** Marcar una receta como favorita para tenerla accesible rápidamente.
-
-- **Alertas de Caducidad:** Configurar avisos visuales de productos próximos a caducar en la despensa.
-
-
+- **Registro mediante fotografía:** Fotografiar el contenido de la nevera o los táperes para identificar y registrar automáticamente los alimentos.
+- **Gestión de favoritos:** Guardar recetas favoritas para acceder a ellas rápidamente.
+- **Alertas de caducidad:** Mostrar avisos visuales sobre los alimentos próximos a caducar.
+- **Selección de supermercado:** Configurar el supermercado habitual para consultar precios estimados de los productos de la lista de la compra.
+- **Estimación del coste de compra:** Calcular el coste aproximado de los ingredientes pendientes para comprobar si se ajustan al presupuesto semanal.
+- **Ajuste por nivel de pereza:** Adaptar las recomendaciones según las ganas que tenga el usuario de cocinar ese día.
 
 ### WON'T HAVE
 
-*Características más avanzadas que no se añadirán en esta primera versión*
+*Características avanzadas que quedan fuera del alcance de la primera versión del proyecto.*
 
-* **Compartir Inventario o Menús en Red:** Sincronizar la despensa en tiempo real con compañeros de piso o familiares
-
-
-
+- **Compartir inventario o menús en red:** Sincronizar en tiempo real la despensa, los táperes y las listas de la compra entre varios usuarios, como compañeros de piso o familiares.
+- **Integración con supermercados:** Realizar pedidos y compras directamente desde la aplicación.
+- **Reconocimiento avanzado de alimentos:** Identificar automáticamente todos los ingredientes y sus cantidades mediante inteligencia artificial sin necesidad de confirmación del usuario.
 ## DEFINICIÓN DEL MVP
 
 En este apartado definimos el prodcuto mínimo viable de nuestra aplicación ***Apañao***:
@@ -147,33 +135,62 @@ En este apartado definimos el prodcuto mínimo viable de nuestra aplicación ***
   Añade los pocos ingredientes que tengas ahora mismo en la nevera y revisa lo que hay disponible
 
 * **Cierre del ciclo:**  
-La aplicación detecta automáticamente qué alimentos faltan para los menús y te genera una lista de la compra (*por ahora estaría disponible mercadona y carrefour, son las únicas APIs que hemos encontrado hasta el último día que hablamos el equipo*)
+La aplicación detecta automáticamente qué alimentos faltan para los menús y te genera una lista de la compra 
 
 
 
-### **Requisitos que forman parte del MVP:**
+**1. Gestión de usuarios**  
+ID	Requisito funcional
 
-Los requisitos indispensables sin los cuales este recorrido mínimo se rompe y no funciona son exclusivamente nuestras funcionalidades **Must have**:
+RF-01	El sistema permitirá registrar nuevos usuarios mediante correo electrónico y contraseña.  
+RF-02	El sistema permitirá iniciar sesión mediante las credenciales del usuario.  
+RF-03	El sistema permitirá consultar y modificar los datos personales y las preferencias del perfil.  
 
-- Registro de Usuario
+**2. Preferencias y restricciones alimentarias**  
+ID	Requisito funcional  
 
-- Inicio de Sesión
+RF-04	El sistema permitirá configurar los ingredientes favoritos del usuario.  
+RF-05	El sistema permitirá indicar los ingredientes que el usuario no desea consumir.  
+RF-06	El sistema permitirá seleccionar los tipos de comida preferidos.  
+RF-07	El sistema permitirá configurar el tiempo disponible para cocinar.  
+RF-08	El sistema permitirá seleccionar los alérgenos e intolerancias alimentarias del usuario.  
+RF-09	El sistema permitirá establecer un presupuesto semanal máximo.  
 
-- Configuración de Perfil
+**3. Gestión de la despensa**  
+ID	Requisito funcional  
 
-- Gestión de Alérgenos
+RF-10	El sistema permitirá añadir nuevos ingredientes a la despensa indicando su nombre y cantidad.  
+RF-11	El sistema permitirá consultar todos los alimentos registrados en la despensa.  
 
-- Alta de Ingredientes
+**4. Gestión de táperes**  
+ID	Requisito funcional  
 
-- Consulta de Despensa
+RF-12	El sistema permitirá registrar nuevos táperes indicando su contenido, número de raciones, fecha de preparación y ubicación.  
+RF-13	El sistema permitirá consultar los táperes disponibles en la nevera y el congelador.  
+RF-14	El sistema permitirá modificar la información de los táperes registrados.  
+RF-15	El sistema permitirá descontar las raciones disponibles de un táper cuando se consuma o se utilice para una comida.  
 
-- Planificación de Menús
+**5. Recomendación de comidas**  
+ID	Requisito funcional  
 
-- Sincronización con la Compra
+RF-16	El sistema permitirá generar sugerencias de comidas utilizando los ingredientes disponibles en la despensa y los táperes registrados.  
+RF-17	El sistema adaptará las recomendaciones a las preferencias alimentarias, los alérgenos, las intolerancias y el tiempo disponible del usuario.  
+RF-18	El sistema tendrá en cuenta el presupuesto semanal configurado para adaptar las recomendaciones.  
 
-- Consulta de la Lista de la Compra
+**6. Notificaciones de táperes**  
+ID	Requisito funcional  
 
-*Todo lo demás (como el control de tuppers, las sugerencias automáticas avanzadas de recetas, el histórico o las alertas de caducidad) queda fuera de esta primera versión (MVP), ya que el usuario puede completar su objetivo principal sin ellas.*
+RF-19	El sistema comprobará si las comidas recomendadas para el día siguiente incluyen táperes almacenados en el congelador.  
+RF-20	El sistema enviará una notificación la noche anterior para recordar al usuario que debe trasladar el táper del congelador a la nevera.  
+
+**7. Gestión de la lista de la compra**  
+ID	Requisito funcional  
+
+RF-21	El sistema permitirá generar automáticamente una lista de la compra con los ingredientes que falten para completar las recetas recomendadas.  
+RF-22	El sistema permitirá consultar la lista de la compra pendiente.  
+RF-23	El sistema permitirá añadir nuevos productos a la lista de la compra.  
+RF-24	El sistema permitirá modificar los productos de la lista de la compra.  
+RF-25	El sistema permitirá eliminar productos de la lista de la compra.  
 
 ## ANÁLISIS DE REQUISITOS TÉCNICOS
 
